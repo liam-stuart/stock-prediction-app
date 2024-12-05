@@ -4,6 +4,7 @@ The following is a stock price prediction app built with Plotly Dash and Tensorf
 The user can choose what stock they would like to see, what model they would like to train, and how many years of financial data they would like to train on.
 
 ![Screenshot](dashboard.png)
+![Screenshot](results.png)
 
 To run the app:
 
