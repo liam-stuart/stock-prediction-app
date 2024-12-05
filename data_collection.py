@@ -12,8 +12,6 @@ warnings.filterwarnings('ignore')
 
 headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:132.0) Gecko/20100101 Firefox/132.0'}
 
-print('Scraping data, please wait...')
-
 
 #A function which extracts the symbols and names of companies listed on the Yahoo Finance trending page. We sort by alphabetical order
 #of the names for later display in the dashboard.
@@ -122,6 +120,7 @@ def additional_dataframes(newdfs):
 if __name__ == '__main__':
     names,symbols=extract_symbols()
     urls=create_urls(symbols)
+    print('Scraping data, please wait...')
     dfs,currencies,symbols,names=create_dataframes(urls,symbols,names)
     newdfs=fill_missing_dates(tidy_dataframes(dfs))
     additional_dataframes(newdfs)
