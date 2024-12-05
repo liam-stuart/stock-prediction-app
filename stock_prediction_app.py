@@ -89,7 +89,7 @@ def train(model,df):
     test['Adj. Close']=(test['Adj. Close']-min)/(max-min)
     train_windows,train_labels,val_windows,val_labels,test_windows,test_labels=windows(train,val,test)
 
-    model.fit(train_windows,train_labels,epochs=20,verbose=False)
+    model.fit(train_windows,train_labels,epochs=10,verbose=False)
     val_preds=model.predict(val_windows,verbose=False)
     test_preds=model.predict(test_windows,verbose=False)
     mae_val=mean_absolute_error(val_preds,val_labels)*(max-min)
